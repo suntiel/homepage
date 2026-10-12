@@ -13,12 +13,28 @@
 
 /* Warm dark mode: deep brown, not black */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #1f1b17;
     --ink: #ede3d4;
     --muted: #a89c8e;
     --accent: #e08a62;
   }
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf6ef;
+  --ink: #2b2724;
+  --muted: #6f655c;
+  --accent: #b5532f;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1f1b17;
+  --ink: #ede3d4;
+  --muted: #a89c8e;
+  --accent: #e08a62;
 }
 
 /* ---------- Base ---------- */
@@ -61,12 +77,27 @@ main {
   margin: 0 0 0.75rem;
 }
 
+.theme-toggle {
+  display: block;
+  margin: 0 0 0.25rem 0.1rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  line-height: 0;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 .sun {
   display: block;
   width: 1.55rem;
   height: 1.55rem;
-  margin: 0 0 0.25rem 0.1rem;
-  color: var(--accent);
   overflow: visible;
 }
 

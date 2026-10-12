@@ -20,10 +20,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
 
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      if (stored === "light" || stored === "dark") {
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    })();
+  </script>
 </head>
 <body>
   <main>
     <header class="masthead">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
       <svg class="sun" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
         <g class="sun-rays" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
           <line x1="32" y1="5" x2="33" y2="14"/>
@@ -41,6 +50,7 @@
           <circle cx="36.8" cy="30.1" r="1.7"/>
         </g>
       </svg>
+      </button>
       <h1>Liv Sun</h1>
     </header>
 
@@ -65,5 +75,32 @@
       <p><a href="https://www.linkedin.com/in/oliviawsun/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="mailto:sunoliviaw@gmail.com">sunoliviaw@gmail.com</a></p>
     </footer>
   </main>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector(".theme-toggle");
+      if (!btn) return;
+
+      function current() {
+        var stored = root.getAttribute("data-theme");
+        if (stored === "light" || stored === "dark") return stored;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      function label(theme) {
+        var next = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+        btn.setAttribute("aria-label", next);
+        btn.setAttribute("title", next);
+      }
+
+      label(current());
+      btn.addEventListener("click", function () {
+        var theme = current() === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        label(theme);
+      });
+    })();
+  </script>
 </body>
 </html>
