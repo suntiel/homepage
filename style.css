@@ -38,9 +38,9 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-serif);
-  font-size: 1.0625rem;
+  font-size: 0.95rem;
   font-weight: 350;
-  line-height: 1.6;
+  line-height: 1.5;
   font-optical-sizing: auto;
 }
 
@@ -48,24 +48,24 @@ body {
 main {
   max-width: var(--measure);
   margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: 1.75rem 1.4rem 2rem;
 }
 
 @media (min-width: 40rem) {
-  body { font-size: 1.125rem; }
-  main { padding-top: 7rem; }
+  body { font-size: 0.98rem; }
+  main { padding: 2.4rem 1.5rem 2rem; }
 }
 
 /* ---------- Name + sun doodle ---------- */
 .masthead {
-  margin: 0 0 1.75rem;
+  margin: 0 0 0.9rem;
 }
 
 .sun {
   display: block;
-  width: 2.35rem;
-  height: 2.35rem;
-  margin: 0 0 0.55rem 0.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin: 0 0 0.3rem 0.12rem;
   color: var(--accent);
   overflow: visible;
 }
@@ -115,7 +115,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   margin: 0;
 }
 
@@ -123,26 +123,26 @@ h1 {
 h1::after {
   content: "";
   display: block;
-  width: 2.5rem;
-  height: 3px;
-  margin-top: 0.75rem;
+  width: 2.1rem;
+  height: 2.5px;
+  margin-top: 0.4rem;
   background: var(--accent);
   border-radius: 2px 6px 3px 5px;
   transform: rotate(-1.5deg);
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.08rem;
   font-style: italic;
-  margin: 2.75rem 0 0.5rem;
+  margin: 1.25rem 0 0.3rem;
 }
 
 p {
-  margin: 0 0 1.1rem;
+  margin: 0 0 0.62rem;
 }
 
 ul {
-  margin: 0 0 1.1rem;
+  margin: 0 0 0.5rem;
   padding: 0;
   list-style: none;
 }
@@ -150,7 +150,7 @@ ul {
 li {
   position: relative;
   padding-left: 1.15rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.18rem;
 }
 
 /* Small terracotta dash instead of a round bullet */
@@ -189,17 +189,17 @@ a:focus-visible {
 
 /* ---------- Footer ---------- */
 footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  margin-top: 1.35rem;
+  padding-top: 0.85rem;
   border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
 }
 
 .updated {
   font-family: var(--font-ui);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.02em;
   color: var(--muted);
-  margin-top: 1.5rem;
+  margin-top: 0.7rem;
 }
 
 /* ---------- Motion ---------- */
