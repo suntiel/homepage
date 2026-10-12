@@ -23,7 +23,26 @@
 </head>
 <body>
   <main>
-    <h1>Liv Sun</h1>
+    <header class="masthead">
+      <svg class="sun" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <g class="sun-rays" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <line x1="32" y1="5" x2="33" y2="14"/>
+          <line x1="32" y1="50" x2="31" y2="59"/>
+          <line x1="5" y1="32" x2="14" y2="33"/>
+          <line x1="50" y1="31" x2="59" y2="32"/>
+          <line x1="13" y1="13" x2="20" y2="19"/>
+          <line x1="45" y1="44" x2="51" y2="51"/>
+          <line x1="51" y1="13" x2="44" y2="20"/>
+          <line x1="19" y1="45" x2="13" y2="51"/>
+        </g>
+        <circle class="sun-face" cx="32.3" cy="31.7" r="12.6" fill="currentColor"/>
+        <g class="sun-eyes" fill="var(--bg)">
+          <circle cx="28.2" cy="30.4" r="1.7"/>
+          <circle cx="36.8" cy="30.1" r="1.7"/>
+        </g>
+      </svg>
+      <h1>Liv Sun</h1>
+    </header>
 
     <section class="about">
       <p>I’m Olivia! I’m an APM at <a href="https://www.databricks.com/">Databricks</a>, where I work on enterprise AI and data governance. Lately, I’ve been learning how to build the metadata and context layer that helps AI agents discover the right data, tools, and knowledge.</p>

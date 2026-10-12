@@ -56,6 +56,56 @@ main {
   main { padding-top: 7rem; }
 }
 
+/* ---------- Name + sun doodle ---------- */
+.masthead {
+  margin: 0 0 1.75rem;
+}
+
+.sun {
+  display: block;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin: 0 0 0.55rem 0.2rem;
+  color: var(--accent);
+  overflow: visible;
+}
+
+.sun-rays {
+  transform-origin: 32px 32px;
+  animation: sun-spin 28s linear infinite;
+}
+
+.sun-eyes {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+/* Hover the name or the sun: it spins faster, bobs, and peeks */
+.masthead:hover .sun-rays,
+.masthead:focus-within .sun-rays {
+  animation-duration: 2.2s;
+}
+
+.masthead:hover .sun,
+.masthead:focus-within .sun {
+  animation: sun-bob 0.65s ease-in-out;
+}
+
+.masthead:hover .sun-eyes,
+.masthead:focus-within .sun-eyes {
+  opacity: 1;
+}
+
+@keyframes sun-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sun-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-4px) rotate(-10deg); }
+  65% { transform: translateY(-1px) rotate(7deg); }
+}
+
 /* ---------- Type ---------- */
 h1,
 h2 {
@@ -66,7 +116,7 @@ h2 {
 
 h1 {
   font-size: 2.5rem;
-  margin: 0 0 1.75rem;
+  margin: 0;
 }
 
 /* A small hand-inked dash under the name */
