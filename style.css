@@ -91,6 +91,30 @@ p {
   margin: 0 0 1.1rem;
 }
 
+ul {
+  margin: 0 0 1.1rem;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Small terracotta dash instead of a round bullet */
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.55rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px 2px 1px 2px;
+}
+
 /* ---------- Links ---------- */
 a {
   color: var(--accent);
